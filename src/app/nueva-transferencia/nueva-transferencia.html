@@ -1,0 +1,28 @@
+<section class="container">
+    <form class="formulario" (ngSubmit)="transferir()">
+        <h2 class="formulario__titulo">Nueva transferencia</h2>
+        <div class="form-field">
+            <label for="valor" class="form-field__label">Valor</label>
+            <input 
+                name="valor"
+                type="text"
+                id="valor"
+                class="form-field__input"
+                placeholder="Valor de transferencia"
+                [(ngModel)] = "valor">
+        </div>
+        <div class="form-field">
+            <label for="destino" class="form-field__label">Destino</label>
+            <input 
+                name="destino"
+                type="text"
+                id="destino"
+                class="form-field__input"
+                placeholder="Cuenta destino"
+                [(ngModel)]="destino">
+        </div>
+        <div class="boton-container">
+            <button class="boton" type="submit">Transferir</button>
+        </div>
+    </form>
+</section>

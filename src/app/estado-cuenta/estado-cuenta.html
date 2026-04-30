@@ -1,0 +1,27 @@
+<div class="estadoContainer">
+
+    <table>
+        <thead>
+            <th>Fecha</th>
+            <th>Valor</th>
+            <th>Destino</th>
+        </thead>
+        @if (transferencias.length > 0) {
+            <tbody>
+                @for ( transferencia of transferencias; track transferencia.valor ) {
+                    <tr>
+                        <td>{{transferencia.fecha | date: "yyyy-MM-dd HH:mm"}}</td>
+                        <td>{{transferencia.valor}}</td>
+                        <td>{{transferencia.destino}}</td>
+                    </tr>
+                }
+            </tbody>
+        } @else {
+            <ng-container [ngTemplateOutlet]="noTransferencias"></ng-container>
+        }
+    </table>
+</div>
+
+<ng-template #noTransferencias>
+    <p>No hay transferencias realizadas.</p>
+</ng-template>
