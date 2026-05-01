@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Transferencia } from '../models/transferencia.model';
+import { Transferencias } from '../services/transferencias';
 
 @Component({
   selector: 'nueva-transferencia',
@@ -8,19 +10,26 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './nueva-transferencia.scss',
 })
 export class NuevaTransferencia {
-  @Output() enviarDatos = new EventEmitter<any>()
+ 
+  constructor(private service : Transferencias) {}
 
   valor: string = ""
   destino: string = ""
 
   transferir() {
-    const datos = {
+    const datos: Transferencia = {
       valor: this.valor,
       destino: this.destino,
       fecha: new Date()
     }
 
-    this.enviarDatos.emit( datos )
+    this.service.agregar(datos).subscribe({
+      next: (respuesta: Transferencia) => {
+        console.log(respuesta);
+      },
+      error: (err) => console.error(err),
+    });
+    
     this.limpiarCampos();
   }
 

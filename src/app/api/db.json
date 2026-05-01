@@ -23,6 +23,13 @@
       "destino": "1241-4",
       "fecha": "2021-11-17T03:54:20.272Z",
       "id": "wYcjI45"
+    },
+    {
+      "valor": "500000",
+      "destino": "3046685983",
+      "fecha": "2026-05-01T19:13:25.611Z",
+      "id": "FbSC-hkFptc"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
