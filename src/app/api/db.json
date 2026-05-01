@@ -29,6 +29,12 @@
       "destino": "3046685983",
       "fecha": "2026-05-01T19:13:25.611Z",
       "id": "FbSC-hkFptc"
+    },
+    {
+      "valor": "200000",
+      "destino": "3046685983",
+      "fecha": "2026-05-01T21:11:02.239Z",
+      "id": "zPW0LH75Vyc"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
