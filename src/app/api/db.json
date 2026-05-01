@@ -23,6 +23,19 @@
       "destino": "1241-4",
       "fecha": "2021-11-17T03:54:20.272Z",
       "id": "wYcjI45"
+    },
+    {
+      "valor": "12344",
+      "destino": "Prueba",
+      "fecha": "2026-05-01T19:08:52.852Z",
+      "id": "pp5qRPB1ZHY"
+    },
+    {
+      "valor": "343434",
+      "destino": "asfasdfaf",
+      "fecha": "2026-05-01T19:09:29.191Z",
+      "id": "SPqwgJfuz4k"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

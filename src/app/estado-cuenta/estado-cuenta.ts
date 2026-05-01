@@ -1,6 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DatePipe, NgTemplateOutlet } from '@angular/common';
 import { Transferencias } from '../services/transferencias';
+import { Transferencia } from '../models/transferencia.model';
 
 @Component({
   selector: 'estado-cuenta',
@@ -9,15 +10,15 @@ import { Transferencias } from '../services/transferencias';
   styleUrl: './estado-cuenta.scss',
 })
 export class EstadoCuenta implements OnInit {
-  transferencias: any = {};
+  transferencias: Transferencia[] = [];
 
   constructor(private service: Transferencias) {
 
   }
 
   ngOnInit(): void {
-    this.service.todas().subscribe((m) => {
-      console.table(m);
+    this.service.todas().subscribe((m: Transferencia[]) => {
+      this.transferencias = m;
     });
   }
 }

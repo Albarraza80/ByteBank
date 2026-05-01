@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class Transferencias {
   listatransferencias: any[];
-  url : string = 'http://localhost:3002/transferencias';
+  url : string = 'http://localhost:3000/transferencias';
 
   constructor(private httpClient: HttpClient) {
     this.listatransferencias = [];
@@ -22,8 +22,8 @@ export class Transferencias {
     return this.listatransferencias;
   }
 
-  agregar($event:any){
-    this.transferencias.push($event);
+  agregar(transferencia: Transferencia): Observable<Transferencia>{
+    return this.httpClient.post<Transferencia>(this.url, transferencia);
   }
 }
 
