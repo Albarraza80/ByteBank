@@ -13,7 +13,6 @@ export class EstadoCuenta implements OnInit {
   transferencias: Transferencia[] = [];
 
   constructor(private service: Transferencias) {
-
   }
 
   ngOnInit(): void {

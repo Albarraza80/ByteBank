@@ -1,19 +1,11 @@
 import { Component } from '@angular/core';
-import { NuevaTransferencia } from "./nueva-transferencia/nueva-transferencia";
-import { EstadoCuenta } from "./estado-cuenta/estado-cuenta";
-import { Transferencias } from './services/transferencias';
+import { RouterOutlet, RouterLinkWithHref, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [NuevaTransferencia, EstadoCuenta],
+  standalone: true,
   templateUrl: './app.html',
+  imports: [RouterOutlet, RouterLinkWithHref, RouterLinkActive],
   styleUrl: './app.scss'
 })
-export class App {
-
-  constructor(private service:Transferencias){}
-
-  transferir( $event: any ) {
-    this.service.agregar($event);
-  }
-}
+export class App {}

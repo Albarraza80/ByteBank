@@ -35,6 +35,18 @@
       "destino": "asfasdfaf",
       "fecha": "2026-05-01T19:09:29.191Z",
       "id": "SPqwgJfuz4k"
+    },
+    {
+      "valor": "10000",
+      "destino": "Prueba",
+      "fecha": "2026-05-02T02:31:09.681Z",
+      "id": "W9ofur0Dzoc"
+    },
+    {
+      "valor": "110",
+      "destino": "Barranquilla",
+      "fecha": "2026-05-02T03:03:36.427Z",
+      "id": "PQnmgQNKd24"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

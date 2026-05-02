@@ -2,6 +2,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Transferencias } from '../services/transferencias';
 import { Transferencia } from '../models/transferencia.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'nueva-transferencia',
@@ -10,7 +11,7 @@ import { Transferencia } from '../models/transferencia.model';
   styleUrl: './nueva-transferencia.scss',
 })
 export class NuevaTransferencia {
-  constructor(private service: Transferencias) {}
+  constructor(private service: Transferencias, private router: Router) {}
 
   valor: string = '';
   destino: string = '';
@@ -24,7 +25,7 @@ export class NuevaTransferencia {
 
     this.service.agregar(datos).subscribe({
       next: (respuesta: Transferencia) => {
-        console.log(respuesta);
+        this.router.navigateByUrl('estado');
       },
       error: (err) => console.error(err),
     });
